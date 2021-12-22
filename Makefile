@@ -5,7 +5,7 @@ endif
  
 # This is the name that our final kernel executable will have.
 # Change as needed.
-override KERNEL := myos.elf
+override KERNEL := guidance.elf
  
 # It is highly recommended to use a custom built cross toolchain to build a kernel.
 # We are only using "cc" as a placeholder here. It may work by using
@@ -45,7 +45,7 @@ override INTERNALCFLAGS :=   \
  
 # Internal linker flags that should not be changed by the user.
 override INTERNALLDFLAGS :=    \
-	-Tlinker.ld            \
+	-Tsrc/linker.ld            \
 	-nostdlib              \
 	-zmax-page-size=0x1000 \
 	-static
