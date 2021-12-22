@@ -72,3 +72,9 @@ $(KERNEL): $(OBJ)
 .PHONY: clean
 clean:
 	rm -rf $(KERNEL) $(OBJ) $(HEADER_DEPS)
+	rm -rf *.iso
+	rm -rf iso-root/*
+	rm -rf *.log
+
+pull-limine:
+	git clone https://github.com/limine-bootloader/limine.git --branch=v2.0-branch-binary --depth=1
